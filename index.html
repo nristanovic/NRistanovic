@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Welcome to my tiny part of the web. Here, I express my liking about web technologies. Web Design and Development are the main focus of my work. Though we mentioned work, this website is the best showcase of my work and information about me, also the stuff that I do, et cetera..." />
+    <meta name="keywords" content="Nikola, Ristanovic, web, design, development" />
+    <meta property="og:title" content="Nikola Ristanovic — Web Design & Development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nristanovic.com" />
+    <meta property="og:image" content="https://www.nristanovic.com/assets/img/body/logo.png" />
+    <meta property="og:description" content="Welcome to my tiny part of the web. Here, I express my liking about web technologies. Web Design and Development are the main focus of my work. Though we mentioned work, this website is the best showcase of my work and information about me, also the stuff that I do, et cetera..." />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Nikola Ristanovic — Web Design & Development</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/icons/manifest.json" />
+    <style>
+      nav > ul > li, nav > ul > li > a {
+        display: inline-block;
+      }
+
+      main, nav > ul, nav > ul > li > a {
+        position: relative;
+      }
+
+      #about, #skills, .section-group {
+        border-bottom: 1px solid rgba(30, 45, 60, .15);
+      }
+
+      .contact > form > textarea, body {
+        font-family: 'PT Sans', sans-serif;
+      }
+
+      @font-face {
+        font-family: 'PT Sans';
+        src: local('assets/css/lib/fontPTSans/PT_Sans-Web-Bold.ttf'), local('assets/css/lib/fontPTSans/PT_Sans-Web-Regular.ttf');
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #87c8e6;
+        text-decoration: none;
+      }
+
+      ::selection {
+        background-color: #87c8e6;
+        color: #1e2d3c;
+      }
+
+      body, nav > ul > li > a {
+        color: rgba(30, 45, 60, .75);
+      }
+
+      body {
+        background-attachment: fixed;
+        background-image: url('assets/img/body/bodyBackground.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 18px;
+        height: 100%;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      #logo {
+        display: block;
+        margin: 1em auto;
+        transition: opacity .3s ease-out;
+        -moz-transition: opacity .3s ease-out;
+        -ms-transition: opacity .3s ease-out;
+        -o-transition: opacity .3s ease-out;
+        -webkit-transition: opacity .3s ease-out;
+        width: 3em;
+        height: 3em;
+      }
+
+      #logo > img {
+        width: 100%;
+      }
+
+      main {
+        background: rgba(255, 255, 255, .95);
+        border-radius: .5em;
+        box-shadow: 0 .5em 1em 0 rgba(30, 45, 60, .33);
+        -webkit-box-shadow: 0 .5em 1em 0 rgba(30, 45, 60, .33);
+        height: 1200px;
+        margin: 0 auto 5em auto;
+        max-width: 760px;
+        overflow: hidden;
+        padding-bottom: 4em;
+        position: relative;
+      }
+
+      nav > ul {
+        list-style: none;
+        top: -.5em;
+      }
+
+      nav > ul > li > a {
+        padding: 2em 1em 1em;
+        text-decoration: none;
+        transition: color .3s linear;
+        -moz-transition: color .3s linear;
+        -ms-transition: color .3s linear;
+        -o-transition: color .3s linear;
+        -webkit-transition: color .3s linear;
+        z-index: 10;
+      }
+
+      #about > h1, nav > ul > li.active > a {
+        color: #1e2d3c;
+      }
+
+      nav > ul > li > a:after {
+        background: #87c8e6;
+        border-radius: .5em;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateY(-112px);
+        transition: transform .6s cubic-bezier(.175, .885, .32, 1.275);
+        -moz-transition: transform .6s cubic-bezier(.175, .885, .32, 1.275);
+        -ms-transition: transform .6s cubic-bezier(.175, .885, .32, 1.275);
+        -o-transition: transform .6s cubic-bezier(.175, .885, .32, 1.275);
+        -webkit-transition: transform .6s cubic-bezier(.175, .885, .32, 1.275);
+        width: 100%;
+        z-index: -1;
+      }
+
+      nav > ul > li > a > .fas {
+        display: block;
+        position: relative;
+        transition: transform .3s;
+        -moz-transition: transform .3s;
+        -ms-transition: transform .3s;
+        -o-transition: transform .3s;
+        -webkit-transition: transform .3s;
+      }
+
+      nav > ul > li > a > span {
+        font-weight: 700;
+      }
+
+      section {
+        opacity: 0;
+        padding: 0 4em;
+        position: absolute;
+        visibility: hidden;
+      }
+
+      section.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #about, #about > figure, #skills {
+        padding: 1em 0;
+      }
+
+      #about > figure > img {
+        border-radius: 3px;
+        box-shadow: 0 0 3px 0 rgba(30, 45, 60, .33);
+      }
+
+      #about > h1 {
+        font-size: 1.5em;
+      }
+
+      #about > h2 {
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 1em;
+      }
+
+      #about > p {
+        font-size: 18px;
+        padding-bottom: .5em;
+        text-align: justify;
+      }
+
+      #about > p:last-of-type {
+        padding-bottom: 0;
+      }
+
+      #skills > h2 {
+        color: #87c8e6;
+        font-size: 1em;
+        text-align: left;
+      }
+
+      .skills-group {
+        margin-top: .5em;
+      }
+
+      .skills-group > h3 {
+        color: #1e2d3c;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3;
+        position: absolute;
+        text-align: left;
+      }
+
+      .skills-group > h3 > i {
+        font-size: 14px;
+        position: relative;
+        top: -1px;
+      }
+
+      .skills-group > ul {
+        font-size: 16px;
+        list-style: none;
+        margin-left: 11em;
+        text-align: left;
+      }
+
+      .skills-group > ul > li::before {
+        content: '\203a'
+      }
+
+      #social {
+        padding-top: 1em;
+      }
+
+      #social > a {
+        color: #1e2d3c;
+        font-size: 1.2em;
+        margin: .15em;
+        padding: .15em .3em;
+        transition: color .3s ease-out;
+        -moz-transition: color .3s ease-out;
+        -ms-transition: color .3s ease-out;
+        -o-transition: color .3s ease-out;
+        -webkit-transition: color .3s ease-out;
+      }
+
+      footer {
+        background-color: #fff;
+        bottom: 0;
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 1.5em 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+
+        body {
+          background-position: center;
+        }
+
+        #logo {
+          height: 1.5em;
+          margin: .5em auto;
+          width: 1.5em;
+        }
+
+        main {
+          box-shadow: none;
+          margin: 0 .5em 2.5em .5em;
+          padding-bottom: 4.3em;
+        }
+
+        nav > ul > li > a {
+          padding: 1.5em .5em 1em;
+        }
+
+        nav > ul > li > a > span {
+          display: none;
+        }
+
+        section {
+          padding: 1em .5em 0;
+        }
+
+        #about > p, #skills > h2 {
+          text-align: center;
+        }
+
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120921167-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120921167-1');
+    </script>
+  </head>
+  <body>
+    <a id="logo" href="https://www.nristanovic.com"><img src="assets/img/body/logo.png" alt="Nikola Ristanovic — Web Design & Development - logo" /></a>
+    <main>
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#"><i class="fas fa-address-card"></i><span>Profile</span></a>
+          </li><li>
+            <a href="#"><i class="fas fa-chart-line"></i><span>Projects</span></a>
+          </li><li>
+            <a href="#"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+          </li><li>
+            <a href="#"><i class="fas fa-coffee"></i><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="profile active">
+        <div id="about">
+          <figure>
+            <img src="assets/img/profile/about.jpg" alt="Nikola Ristanovic — Web Design & Development" />
+          </figure>
+          <h1>Nikola Ristanovic</h1>
+          <h2>Web Design & Development</h2>
+          <p>Hello! First of all, I would like to greet you. I am born and raised in Belgrade where I currently study Software and Information Engineering at <a href="https://www.singidunum.ac.rs">Singidunum University's</a> Faculty of Technical Sciences.</p>
+          <p>My work is intended for creating websites to help people succeed. Outside of work or university, I am very impressed with science, technology, good food, learning new stuff, and pretty much anything inspiring and that is making us exercise our brains.</p>
+          <p>Below, you can see a plain list of skills that I assign to myself. But, at the end of the day, I think that results are standing as the central factor of our work. Therefore, make yourself comfortable in project section!</p>
+        </div>
+        <div id="skills">
+          <h2>Skills</h2>
+          <div class="skills-group">
+            <h3><i class="fas fa-code"></i> Main</h3>
+            <ul>
+              <li> Coding skills in HTML5, CSS3, Sass and LESS;</li>
+              <li> Programming skills in JavaScript and Node.js;</li>
+              <li> Programming skills in PHP;</li>
+              <li> MySQL, MongoDB database skills;</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3><i class="fas fa-user"></i> Personal</h3>
+            <ul>
+              <li> Able to work individualy or with a team;</li>
+              <li> Paying attention to details;</li>
+              <li> Very effective and clear communication skills;</li>
+              <li> Abilities to follow complex instructions;</li>
+              <li> Ready for further training and learning;</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3><i class="fas fa-plus-square"></i> Other</h3>
+            <ul>
+              <li> Skills of use of Microsoft Office Suites;</li>
+              <li> Operating system usage skills (Linux systems as well as Windows, comfortable in terminal);</li>
+              <li> Knowledge of English language on an intermediate level;</li>
+            </ul>
+          </div>
+        </div>
+        <nav id="social">
+          <a href="https://github.com/nristanovic"><i class="fab fa-github-square"></i></a>
+          <a href="https://www.instagram.com/r1stv"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/rista011"><i class="fab fa-facebook-square"></i></a>
+        </nav>
+      </section>
+      <section class="projects">
+        <header class="section-header">
+          <h2>My Projects</h2>
+          <h3>Projects are sorted the most recent at top</h3>
+        </header>
+        <div class="section-group">
+          <i class="fas fa-tasks"></i>
+          <h3><a href="https://github.com/nristanovic/Food-Express" target="_blank">Food-Express <span><i class="fab fa-github"></i> <i class="fas fa-external-link-alt"></i></span></h3>
+          <h4>Angular.js Application</h4>
+          <p>Learning Angular.js was the point of this project. Database is connected via Firebase. You can create profile, add restaurants and products, make orders etc... In the bottom left corner is where the Chat Bot is located, it's created to help users about basic app usage.</p>
+          <div class="project-images">
+            <a class="project-image" href="assets/img/projects/food-express/project-food-express-1.png">
+              <img src="assets/img/projects/food-express/project-food-express-1.png" alt="Project Food-Express Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/food-express/project-food-express-2.png">
+              <img src="assets/img/projects/food-express/project-food-express-2.png" alt="Project Food-Express Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/food-express/project-food-express-3.png">
+              <img src="assets/img/projects/food-express/project-food-express-3.png" alt="Project Food-Express Screenshot Portfolio" />
+            </a>
+          </div>
+        </div>
+        <div class="section-group">
+          <i class="fas fa-tasks"></i>
+          <h3><a href="https://github.com/nristanovic/CampAcademy" target="_blank">CampAcademy <span><i class="fab fa-github"></i> <i class="fas fa-external-link-alt"></i></span></a></h3>
+          <h4>Node.js Application</h4>
+          <p>In this application, the main focus was on Node.js. Depending on type of user, you can make courses, bootcamps, and review them. MongoDB is used as a database.</p>
+          <div class="project-images">
+            <a class="project-image" href="assets/img/projects/campacademy/project-campacademy-1.png">
+              <img src="assets/img/projects/campacademy/project-campacademy-1.png" alt="Project CampAcademy Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/campacademy/project-campacademy-2.png">
+              <img src="assets/img/projects/campacademy/project-campacademy-2.png" alt="Project CampAcademy Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/campacademy/project-campacademy-3.png">
+              <img src="assets/img/projects/campacademy/project-campacademy-3.png" alt="Project CampAcademy Screenshot Portfolio" />
+            </a>
+          </div>
+        </div>
+        <div class="section-group">
+          <i class="fas fa-tasks"></i>
+          <h3><a href="https://github.com/nristanovic/NRistanovic" target="_blank">Personal Portfolio <span><i class="fab fa-github"></i> <i class="fas fa-external-link-alt"></i></span></a></h3>
+          <h4>Responsive Frontend Design</h4>
+          <p>This is my portfolio website that you are currently visiting. I have focused on making it look powerful but yet to be optimized and lightweight as possible. I have not used any type of plugin. Only HTML5, CSS3, JavaScript, and a bit of PHP just for the contact form.</p>
+          <div class="project-images">
+            <a class="project-image" href="assets/img/projects/nristanovic/project-nristanovic-1.png">
+              <img src="assets/img/projects/nristanovic/project-nristanovic-1.png" alt="Project Nikola Ristanovic Portfolio Screenshot nristanovic" />
+            </a>
+          </div>
+        </div>
+        <div class="section-group">
+          <i class="fas fa-tasks"></i>
+          <h3><a href="https://github.com/nristanovic/Zona-dekoracije" target="_blank">Zona dekoracije <span><i class="fab fa-github"></i> <i class="fas fa-external-link-alt"></i></span></a></h3>
+          <h4>Responsive Frontend Design</h4>
+          <p>A website made for the private business that is making decorations for all types of celebrations. Here, I tried Bootstrap for the first time. And in general I have used HTML5, CSS3, JavaScript, jQuery and a bit of PHP just for the contact form. You can find it live on <a href="https://zonadekoracije.com">zonadekoracije.com</a>.</p>
+          <div class="project-images">
+            <a class="project-image" href="assets/img/projects/zona/project-zona-1.png">
+              <img src="assets/img/projects/zona/project-zona-1.png" alt="Project Zona dekoracije Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/zona/project-zona-2.png">
+              <img src="assets/img/projects/zona/project-zona-2.png" alt="Project Zona dekoracije Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/zona/project-zona-3.png">
+              <img src="assets/img/projects/zona/project-zona-3.png" alt="Project Zona dekoracije Screenshot Portfolio" />
+            </a>
+          </div>
+        </div>
+        <div class="section-group no-border">
+          <i class="fas fa-tasks"></i>
+          <h3><a href="https://github.com/nristanovic/Medically" target="_blank">Medically <span><i class="fab fa-github"></i> <i class="fas fa-external-link-alt"></i></span></a></h3>
+          <h4>Basic Frontend Design</h4>
+          <p>In the first semester, and also the first year on Singidunum University, for one of the exams, we had to design a website. In that semester I had just met HTML, CSS, JavaScript, and jQuery. We have been requested to make a simple website that would look like some commercial website as close as possible. The main accent of that whole exam was on the jQuery, so I didn't use CSS3 animations, and we didn't know about responsive design.</p>
+          <div class="project-images">
+            <a class="project-image" href="assets/img/projects/medically/project-medically-1.png">
+              <img src="assets/img/projects/medically/project-medically-1.png" alt="Project Medically Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/medically/project-medically-2.png">
+              <img src="assets/img/projects/medically/project-medically-2.png" alt="Project Medically Screenshot Portfolio" />
+            </a>
+            <a class="project-image" href="assets/img/projects/medically/project-medically-3.png">
+              <img src="assets/img/projects/medically/project-medically-3.png" alt="Project Medically Screenshot Portfolio" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="education">
+        <header class="section-header">
+          <h2>My Education</h2>
+          <h3>Some say acquisition of knowledge, skills, values, beliefs, and habits</h3>
+        </header>
+        <div class="section-group">
+          <i class="fas fa-university"></i>
+          <h3>Bachelor Student - Study Programme: Software and Information Engineering</h3>
+          <h4>2017 - Present</h4>
+          <ul>
+            <li><i class="fas fa-book"></i> Singidunum University's Faculty of Technical Sciences</li>
+            <li><i class="fas fa-map-marker"></i> Danijelova 32, Belgrade, Serbia</li>
+            <li><i class="fas fa-external-link-alt"></i> <a href="https://tf.singidunum.ac.rs">tf.singidunum.ac.rs</a></li>
+          </ul>
+        </div>
+        <div class="section-group no-border">
+          <i class="fas fa-school"></i>
+          <h3>Economic Technician, Fourth Degree, High School</h3>
+          <h4>2013 - 2017</h4>
+          <ul>
+            <li><i class="fas fa-graduation-cap"></i> High School of Economics "Prva ekonomska skola"</li>
+            <li><i class="fas fa-map-marker"></i> Cetinjska 5-7, Belgrade, Serbia</li>
+            <li><i class="fas fa-external-link-alt"></i> <a href="http://www.prvaekonomska.edu.rs">prvaekonomska.edu.rs</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact">
+        <header class="section-header">
+          <h2>Write Something to Me</h2>
+          <h3>Please do not hesitate to get in touch</h3>
+        </header>
+        <form class="section-group" action="mailer.php" method="POST">
+          <input class="contact-name" type="text" name="name" placeholder="Name..." />
+          <input class="contact-email" type="email" name="email" placeholder="Email..." />
+          <textarea class="contact-msg" name="message" placeholder="Message..." rows="10"></textarea>
+          <input class="contact-submit" type="button" name="submit" value="Submit" /><input
+          class="contact-reset" type="button" name="reset" value="Reset" />
+          <ul class="contact-status"></ul>
+        </form>
+        <address class="section-group no-border">
+          <i class="fas fa-envelope"></i>
+          <ul>
+            <li>Nikola Ristanovic</li>
+            <li>Web Design & Development</li>
+            <li><i class="fas fa-phone"></i> <a href="tel&colon;&plus;381616323413">00 381 61 632 3413</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto&colon;nristanovic&#64;protonmail&#46;com">nristanovic&#64;protonmail&#46;com</a></li>
+            <li><i class="fas fa-link"></i> <a href="https://www.nristanovic.com">nristanovic.com</a></li>
+          </ul>
+        </address>
+      </section>
+      <footer>
+        <span>Copyright &copy; 2018 <a href="https://www.nristanovic.com">Nikola Ristanovic</a>. All Rights Reserved.</span>
+      </footer>
+    </main>
+    <noscript id="deferred-styles">
+      <link href="assets/css/lib/fontawesome/fontawesome-all.min.css" rel="stylesheet" />
+      <link href="assets/css/lib/featherlight/featherlight.css" type="text/css" rel="stylesheet" />
+      <link href="assets/css/lib/featherlight/featherlight.gallery.css" type="text/css" rel="stylesheet" />
+      <link href="assets/css/style.css" rel="stylesheet" />
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <script src="assets/js/lib/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/lib/featherlight/featherlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/lib/featherlight/featherlight.gallery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
